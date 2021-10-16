@@ -1,0 +1,6 @@
+[submodule "skynet"]
+	path = skynet
+	url = https://github.com/cloudwu/skynet.git
+[submodule "skynetgo"]
+	path = skynetgo
+	url = git@github.com:Gowa2017/goskynet.git
