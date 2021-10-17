@@ -1,0 +1,8 @@
+{
+    "Lua.workspace.ignoreSubmodules": false,
+    "Lua.workspace.library": [
+        "/Users/gowa/.vscode/lua/meta",
+        "${3rd}/skynet/library"
+    ],
+    "Lua.workspace.checkThirdParty": false
+}

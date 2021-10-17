@@ -16,7 +16,7 @@ harbor    = 0      -- 通常为 0 ，单节点模式，多节点的话优先使�
 -- cluster   = ""     -- 它决定了集群配置文件的路径。
 -- profile   = true   -- 默认为 true, 可以用来统计每个服务使用了多少 cpu 时间。在 DebugConsole 中可以查看。会对性能造成微弱的影响，设置为 false 可以关闭这个统计。
 ---* preload 的目的，是将一些全局内容给加载来，或是预先加载一些比较耗时的内容
--- preload     = root .. "lualib/preload.lua" preload can define SERVICE_DESC = table.concat({...}) to get a better log output
+preload     = root .. "lualib/preload.lua" --preload can define SERVICE_DESC = table.concat({...}) to get a better log output
 ----------------------相关定义-------------
 --- 必须在一个叫做 conf.message 的模块中定义消息，放在哪里不重要，只要 require 能找到就行
 logLevel = 1    -- 日志级别 0 all，1 debug 2 info 3 warning 4 error 5 critical，级别越高打印的日志越少

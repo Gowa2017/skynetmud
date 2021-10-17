@@ -4,3 +4,6 @@
 [submodule "skynetgo"]
 	path = skynetgo
 	url = git@github.com:Gowa2017/goskynet.git
+[submodule "core"]
+	path = core
+	url = git@github.com:Gowa2017/skynegmudlib.git
