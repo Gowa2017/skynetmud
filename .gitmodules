@@ -1,9 +1,12 @@
 [submodule "skynet"]
 	path = skynet
 	url = https://github.com/cloudwu/skynet.git
+    branch = master
 [submodule "skynetgo"]
 	path = skynetgo
 	url = git@github.com:Gowa2017/goskynet.git
+    branch = master
 [submodule "core"]
 	path = core
 	url = git@github.com:Gowa2017/skynegmudlib.git
+    branch = master
