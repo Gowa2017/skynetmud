@@ -4,5 +4,8 @@
         "/Users/gowa/.vscode/lua/meta",
         "${3rd}/skynet/library"
     ],
-    "Lua.workspace.checkThirdParty": false
+    "Lua.workspace.checkThirdParty": false,
+    "code-runner.executorMap": {
+        "lua": "lua -l env",
+    }
 }
