@@ -3,3 +3,4 @@ luaclib/yaml.so
 lualib/lyaml
 lualib/pl/
 lualib/eansi.lua
+data
