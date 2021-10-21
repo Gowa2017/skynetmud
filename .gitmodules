@@ -10,3 +10,6 @@
 	path = core
 	url = git@github.com:Gowa2017/skynegmudlib.git
     branch = master
+[submodule "bundles"]
+	path = bundles
+	url = git@github.com:Gowa2017/skynetmudbundles.git
