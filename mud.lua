@@ -19,7 +19,7 @@ harbor    = 0      -- 通常为 0 ，单节点模式，多节点的话优先使�
 preload     = root .. "lualib/preload.lua" --preload can define SERVICE_DESC = table.concat({...}) to get a better log output
 ----------------------相关定义-------------
 --- 必须在一个叫做 conf.message 的模块中定义消息，放在哪里不重要，只要 require 能找到就行
-logLevel    = 0    -- 日志级别 0 all，1 debug 2 info 3 warning 4 error 5 critical，级别越高打印的日志越少
+logLevel    = 2    -- 日志级别 0 all，1 debug 2 info 3 warning 4 error 5 critical，级别越高打印的日志越少
 dev         = true -- 暂时无用
 gameConfig  = 'game.lua' -- must a path
 bundleDir   = '.' -- must a path, has bundles subdir, no  must ., feture will support other dir
