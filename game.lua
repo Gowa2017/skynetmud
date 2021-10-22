@@ -1,6 +1,8 @@
 return {
   port                      = 8000,
   bundles                   = {
+    "bundle-input-events",
+    "telnet-networking",
     "bundle-example-areas",
     "bundle-example-quests",
     "bundle-example-lib",
@@ -8,11 +10,10 @@ return {
     "bundle-example-npc-behaviors",
     "bundle-example-combat",
     "lootable-npcs",
-    "bundle-input-events",
-    "telnet-networking",
     "bundle-example-commands",
     "bundle-example-player-events",
     "bundle-example-channels",
+    "bundle-example-classes",
   },
   dataSources               = {
     Lua           = { require = "core.DataSource.LuaDataSource" },
