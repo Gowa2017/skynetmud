@@ -1,0 +1,21 @@
+@startuml TelnetServer
+!include Skynet.puml
+!include core.puml
+!include C4_Dynamic.puml
+title TelnetServer
+
+Person(user, "User")
+
+Service_Boundary(auth,"Auth"){
+    Table(inputEventManager,"InputEventManager")
+}
+Service(accountManager,"AccountManager")
+Service(agent,"Agent")
+Service_Boundary(telnet,"TelnetService") {
+    LObject(ss,"SocketServer")
+}
+Rel_U(user, ss, "connect","Telnet")
+Rel_R(ss, inputEventManager, "input event","call")
+Rel_Neighbor(auth, accountManager, "Use","call")
+Rel_U(ss, agent,"command","rawcall")
+@enduml

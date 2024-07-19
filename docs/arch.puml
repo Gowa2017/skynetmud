@@ -1,0 +1,34 @@
+@startuml MUD
+!include C4_Dynamic.puml
+Person(user, "User")
+
+skinparam DefaultFontName WenQuanYi Zen Hei
+skinparam DefaultMonospacedFontName UbuntuMono-R
+
+
+
+Container_Boundary(skynet, "Skynet"){
+Component(telnet, "TelnetServer", "LUA/TCP")
+' Component(websocket, "WebSocketServer", "LUA/TCP")
+Component(auth, "Auth", "Lua")
+Component(agentMgr, "Agent Manager", "Lua")
+Component(agent, "Agent", "Lua","Command logic, Most of User input handler")
+
+Component(world, "World", "Lua","Load area, manage area")
+Component(area, "Area", "Lua","Manage a areas rooms and entitys")
+Component(playerManager, "PlayerManager", "Lua","Load/Save player info")
+Component(accountManage, "Account Manager", "Lua","Register and load account from datascource")
+}
+
+Rel_R(agentMgr, agent, "Pre Start")
+Rel_R(world, area, "hydrate")
+
+Rel_U(user, telnet, "connect","Telnet")
+Rel_Neighbor(telnet,auth,"auth","call")
+Rel_Neighbor(auth, accountManage,"Use")
+Rel_U(telnet, agentMgr,"get a agent","call")
+Rel_R(agent, playerManager, "Use")
+Rel_U(telnet,agent,"command","rawcall")
+Rel_U(agent, world, "enter world")
+
+@enduml

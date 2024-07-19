@@ -2,7 +2,7 @@ return {
   port                      = 8000,
   bundles                   = {
     "bundle-input-events",
-    "telnet-networking",
+    -- "telnet-networking",
     "bundle-example-areas",
     "bundle-example-quests",
     "bundle-example-lib",
